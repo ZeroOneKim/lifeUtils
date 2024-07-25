@@ -31,5 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
-.SecurityInfo
-.application.properties
+
+##ADD##
+**/SecurityInfo.java
+*.properties
