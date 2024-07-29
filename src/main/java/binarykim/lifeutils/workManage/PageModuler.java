@@ -31,8 +31,13 @@ public class PageModuler {
     }
 
     public void isSKIP() {
-        System.out.println("CHECKED : " + driver);
         WebElement SKIP = driver.findElement(By.className("welcome_skip"));
         SKIP.click();
+    }
+
+    public void prcManage() {
+        //TODO 출근처리
+        //            WebElement workIn = driver.findElement(By.id("workIn"));
+        //            System.out.println(workIn);
     }
 }

@@ -14,7 +14,7 @@ public class LifeutilsApplication {
 	@Bean
 	public CommandLineRunner commandLineRunner(WorkManager workManager) {
 		return args -> {
-			workManager.doTest();
+			workManager.doManage();
 		};
 	}
 }

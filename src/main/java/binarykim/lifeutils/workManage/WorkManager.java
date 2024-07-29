@@ -7,21 +7,17 @@ import org.springframework.stereotype.Component;
 public class WorkManager {
     @Autowired private PageModuler pageModuler;
 
-    public void doTest() {
+    public void doManage() {
         Thread thread = new Thread();
 
         try {
-            pageModuler.loginPRC();
-
+            pageModuler.loginPRC(); //Login
             thread.sleep(5000);
-            pageModuler.isSKIP();
+            pageModuler.isSKIP();   //popup Skip
+            thread.sleep(500);
 
-//            WebElement workIn = driver.findElement(By.id("workIn"));
-//            System.out.println(workIn);
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-            System.out.println("CHK");
         }
     }
 }
