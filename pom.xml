@@ -49,7 +49,7 @@
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
-			<version>5.6.1</version> <!-- 최신 버전 확인 후 사용 -->
+			<version>5.6.1</version> <!-- webDriver -->
 		</dependency>
 	</dependencies>
 
