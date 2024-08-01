@@ -9,13 +9,6 @@ import java.util.Random;
 
 @Component
 public class SchedulerTasks {
-
-    //@Scheduled(cron = "0 53 8 * * ?") TODO 난수 설정
-    @Scheduled(fixedDelay = 10000)
-    public void doWorkValid() {
-        System.out.println("TEST");
-    }
-
     public static void main(String[] args) {
     }
 
@@ -23,7 +16,7 @@ public class SchedulerTasks {
         LocalDate today = LocalDate.now();
         int year = today.getYear();
         String month = ((today.getMonthValue()+"").length() == 1) ? "0"+today.getMonthValue() : today.getMonthValue()+"";
-        int day = today.getDayOfMonth();
+        String day = (today.getDayOfMonth()+"").length() == 1 ? "0"+today.getDayOfMonth() : today.getDayOfMonth()+"";
 
         return year+month+day;
     }
@@ -41,7 +34,7 @@ public class SchedulerTasks {
         LocalDate today = LocalDate.now();
         int year = today.getYear();
         String month = ((today.getMonthValue()+"").length() == 1) ? "0"+today.getMonthValue() : today.getMonthValue()+"";
-        int day = today.getDayOfMonth();
+        String day = (today.getDayOfMonth()+"").length() == 1 ? "0"+today.getDayOfMonth() : today.getDayOfMonth()+"";
 
         LocalTime lc = LocalTime.now();
         System.out.println(year+month+day + "   " +lc.getHour()+":"+lc.getMinute()+":"+lc.getSecond());
