@@ -1,4 +1,4 @@
-package binarykim.lifeutils.workManage.security;
+package binarykim.lifeutils.workManage;
 
 import binarykim.lifeutils.workManage.WorkManager;
 import org.springframework.boot.ApplicationArguments;

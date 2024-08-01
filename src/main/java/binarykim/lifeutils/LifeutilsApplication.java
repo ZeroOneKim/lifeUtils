@@ -1,11 +1,8 @@
 package binarykim.lifeutils;
 
 import binarykim.lifeutils.workManage.WorkManager;
-import binarykim.lifeutils.workManage.security.CumtomizedRunner;
-import binarykim.lifeutils.workManage.timer.WorkDay;
-import org.springframework.beans.factory.annotation.Autowired;
+import binarykim.lifeutils.workManage.CumtomizedRunner;
 import org.springframework.boot.ApplicationRunner;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
