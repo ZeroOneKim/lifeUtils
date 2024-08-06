@@ -36,8 +36,7 @@ public class PageModuler {
     }
 
     public void prcManage() {
-        //TODO 출근처리
-        //            WebElement workIn = driver.findElement(By.id("workIn"));
-        //            System.out.println(workIn);
+        WebElement workIn = driver.findElement(By.id("workIn"));
+        workIn.click();
     }
 }
