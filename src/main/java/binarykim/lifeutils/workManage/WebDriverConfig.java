@@ -20,6 +20,7 @@ public class WebDriverConfig {
         if (driver == null) {
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
+            options.addArguments("--headless");
             driver = new ChromeDriver(options);
         }
         return driver;
