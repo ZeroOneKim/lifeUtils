@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class WorkManager {
-    @Autowired private PageModuler pageModuler;
+    @Autowired PageModuler pageModuler;
     @Autowired WorkDay workDay;
     @Autowired SchedulerTasks schedulerTasks;
 
@@ -18,7 +18,7 @@ public class WorkManager {
     public void doManage() {
         if(workDay.getWorkDayList().isEmpty()) workDay.startInit();
 
-        testCount++; //TODO DELETE it
+        testCount++;
         if(testCount == 1) return;
         if(workDay.getWorkDayList().contains(schedulerTasks.getNow())) {
             try {
@@ -27,12 +27,13 @@ public class WorkManager {
                 Thread.sleep(sleepT*1000);
 
                 schedulerTasks.getTestTime();
-                System.out.println(testCount + "] 작업 진행 됨.");
-//            pageModuler.loginPRC(); //Login
-//            thread.sleep(5000);
-//            pageModuler.isSKIP();   //popup Skip
-//            thread.sleep(500);
+                pageModuler.loginPRC(); //Login
+                Thread.sleep(5000);
+                pageModuler.isSKIP();   //popup Skip
+                Thread.sleep(500);
+                pageModuler.prcManage();
 
+                System.out.println(testCount + "] 작업 진행 됨.");
             } catch (Exception e) {
                 e.printStackTrace();
             }
