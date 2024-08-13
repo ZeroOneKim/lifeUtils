@@ -14,7 +14,7 @@ public class WorkManager {
 
     static int testCount = 0;
 
-    @Scheduled(cron = "0 53 8 * * ?")
+    @Scheduled(cron = "0 50 8 * * ?")
     public void doManage() {
         if(workDay.getWorkDayList().isEmpty()) workDay.startInit();
 
