@@ -28,7 +28,7 @@ public class WorkManager {
 
                 schedulerTasks.getTestTime();
                 pageModuler.loginPRC(); //Login
-                Thread.sleep(5000);
+                Thread.sleep(8000);
                 pageModuler.isSKIP();   //popup Skip
                 Thread.sleep(500);
                 pageModuler.prcManage();
