@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+
 @Component
 public class PageModuler {
     @Autowired SecurityInfo securityInfo;
@@ -16,7 +17,7 @@ public class PageModuler {
         this.driver = WebDriverConfig.getDriver();
     }
 
-    public void loginPRC() {
+    public void loginPRC() throws Exception {
         System.out.println("CHECKED : " + driver);
         driver.get(securityInfo.getUrl());
 
@@ -28,11 +29,13 @@ public class PageModuler {
         passwordField.sendKeys(securityInfo.getGwPassword());
 
         loginButton.click();
+        Thread.sleep(8000);
     }
 
-    public void isSKIP() {
+    public void isSKIP() throws Exception {
         WebElement SKIP = driver.findElement(By.className("welcome_skip"));
         SKIP.click();
+        Thread.sleep(500);
     }
 
     public void prcManage() {
