@@ -32,7 +32,7 @@ public class WorkManager {
                 pageModuler.isSKIP();   //popup Skip
                 Thread.sleep(500);
                 pageModuler.prcManage();
-
+                pageModuler.quitDriver();
                 System.out.println(testCount + "] 작업 진행 됨.");
             } catch (Exception e) {
                 e.printStackTrace();

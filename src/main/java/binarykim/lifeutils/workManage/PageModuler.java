@@ -39,4 +39,8 @@ public class PageModuler {
         WebElement workIn = driver.findElement(By.id("workIn"));
         workIn.click();
     }
+
+    public void quitDriver() {
+        driver.quit();
+    }
 }
