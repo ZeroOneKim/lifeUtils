@@ -28,12 +28,12 @@ public class WorkManager {
 
                 schedulerTasks.getTestTime();
                 pageModuler.loginPRC(); //Login
-                Thread.sleep(8000);
                 pageModuler.isSKIP();   //popup Skip
-                Thread.sleep(500);
-                pageModuler.prcManage();
-                pageModuler.quitDriver();
-                System.out.println(testCount + "] 작업 진행 됨.");
+                pageModuler.prcManage();//workIn
+
+                pageModuler.quitDriver(); //종료
+
+                System.out.println(testCount + "] 작업 진행 됨."); //TODO EMAIL
             } catch (Exception e) {
                 e.printStackTrace();
             }
