@@ -1,6 +1,5 @@
 package binarykim.lifeutils.workManage.timer;
 
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
@@ -30,7 +29,7 @@ public class SchedulerTasks {
         return random.nextInt(250)+1;
     }
 
-    public void getTestTime() { //TODO 제거예정
+    public void getTestTime() {
         LocalDate today = LocalDate.now();
         int year = today.getYear();
         String month = ((today.getMonthValue()+"").length() == 1) ? "0"+today.getMonthValue() : today.getMonthValue()+"";

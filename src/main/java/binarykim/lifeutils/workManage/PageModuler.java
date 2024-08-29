@@ -17,7 +17,15 @@ public class PageModuler {
         this.driver = WebDriverConfig.getDriver();
     }
 
+    private void initializeDriver() {
+        if (driver == null) {
+            driver = WebDriverConfig.getDriver();
+        }
+    }
+
     public void loginPRC() throws Exception {
+        initializeDriver();
+
         System.out.println("CHECKED : " + driver);
         driver.get(securityInfo.getUrl());
 
@@ -45,5 +53,6 @@ public class PageModuler {
 
     public void quitDriver() {
         driver.quit();
+        driver = null;
     }
 }

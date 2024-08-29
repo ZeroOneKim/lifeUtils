@@ -20,11 +20,12 @@ public class WorkManager {
 
         testCount++;
         if(testCount == 1) return;
+
         if(workDay.getWorkDayList().contains(schedulerTasks.getNow())) {
             try {
                 int sleepT = schedulerTasks.occurRandTime();
-                System.out.println("Wating ....   " + sleepT + " Seconds");
-                Thread.sleep(sleepT*1000);
+                System.out.println("Waitng ....   " + sleepT + " Seconds");
+                Thread.sleep(5000+sleepT);
 
                 schedulerTasks.getTestTime();
                 pageModuler.loginPRC(); //Login
@@ -33,7 +34,7 @@ public class WorkManager {
 
                 pageModuler.quitDriver(); //종료
 
-                System.out.println(testCount + "] 작업 진행 됨."); //TODO EMAIL
+                System.out.println(testCount + "] 작업 진행 됨."); //TODO EMAIL 시간나면?
             } catch (Exception e) {
                 e.printStackTrace();
             }
